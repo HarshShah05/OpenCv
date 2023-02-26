@@ -14,4 +14,18 @@ def resizeimg(img):
 
 reimg=resizeimg(img)
 cv.imshow("Tower",reimg)
+
+grayimg=cv.cvtColor(reimg,cv.COLOR_BGR2GRAY)
+cv.imshow("Black",grayimg)
+
+# Laplacian
+lap =cv.Laplacian(grayimg,cv.CV_64F)
+# all pixels values are converted to absolute values...UInt8 is image dtype
+lap=np.uint8(np.absolute(lap))
+
+# Canny
+
+cannyimg=cv.Canny(grayimg,150,175)
+cv.imshow("Cannyimg",cannyimg)
+cv.imshow('Laplacian',lap)
 cv.waitKey(0)
