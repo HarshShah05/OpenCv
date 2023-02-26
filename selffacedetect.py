@@ -2,6 +2,12 @@ import cv2 as cv
 import numpy as np
 # Facedetection
 video=cv.VideoCapture(0)
+def change_res(width, height):
+    video.set(3, width)
+    video.set(4, height)
+    
+change_res(2000, 720)
+
 xmlread=cv.CascadeClassifier('haar_face.xml')
 while True:
     ret,frame=video.read()
