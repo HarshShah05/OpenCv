@@ -1,0 +1,1 @@
+# handtrack works on 2 modules in backend ---Palm detection and Hand Landmarks
