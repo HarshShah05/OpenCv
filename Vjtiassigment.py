@@ -8,7 +8,7 @@ blank[:]=255,255,255
 # cv.imshow("Blank",blank)
 
 cv.rectangle(blank,(100,100),(0,0),((0,0,255)),thickness=-1)
-cv.rectangle(blank,(1000,0),(1000,100),((0,255,255)),thickness=-1)
+cv.rectangle(blank,(1000,1000),(1000,0),((0,255,255)),thickness=-1)
 # cv.imshow("blank",blank)
 
 
