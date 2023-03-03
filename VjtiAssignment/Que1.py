@@ -7,11 +7,15 @@ import numpy as np
 blank =np.ones((1000,1500,3),dtype='uint8')
 blank[:]=255,255,255
 # cv.imshow("Blank",blank)
+
+
 red=(0,0,255)
 yellow=(0,255,255)
 green=(0,255,0)
 blue=(255,0,0)
 lightblue=(255,255,0)
+black=(0,0,0)
+white=(255,255,255)
 
 cv.rectangle(blank,(0,0),(100,100),((red)),thickness=-1)
 cv.rectangle(blank,(1400,0),(1500,100),((yellow)),thickness=-1)
