@@ -2,9 +2,9 @@ import cv2 as cv
 import numpy as np
 
 
-# a=int(input("Enter dimension 1 "))
-# b=int(input("Enter dimension 2 "))
-blank =np.ones((1000,1500,3),dtype='uint8')
+a=int(input("Enter dimension 1 "))
+b=int(input("Enter dimension 2 "))
+blank =np.ones((b,a,3),dtype='uint8')
 blank[:]=255,255,255
 # cv.imshow("Blank",blank)
 
@@ -18,9 +18,9 @@ black=(0,0,0)
 white=(255,255,255)
 
 cv.rectangle(blank,(0,0),(100,100),((red)),thickness=-1)
-cv.rectangle(blank,(1400,0),(1500,100),((yellow)),thickness=-1)
-cv.rectangle(blank,(0,900),(100,1000),((green)),thickness=-1)
-cv.rectangle(blank,(1400,900),(1500,1000),((blue)),thickness=-1)
+cv.rectangle(blank,((a-100),0),(a,100),((yellow)),thickness=-1)
+cv.rectangle(blank,(0,(b-100)),(100,b),((green)),thickness=-1)
+cv.rectangle(blank,((a-100),(b-100)),(a,b),((blue)),thickness=-1)
 
 # Centte box
 cv.rectangle(blank,(550,400),(950,600),((lightblue)),thickness=-1)
