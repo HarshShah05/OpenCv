@@ -21,3 +21,5 @@ while True:
 video.release()
 cv.destroyAllWindows()
     
+
+
