@@ -34,7 +34,28 @@ if str==1:
     img1=lines(blank)
     cv.imshow("Blank",img1)
     cv.waitKey(0)
-    cv.imwrite("Lines.jpg",img1)
+    cv.imwrite("Q2-A.jpg",img1)
+elif str==2:
+  b2=int(input("Enter height"))
+  a2=int(input("Enter width"))
+  blank =np.ones((b2,a2,3),dtype='uint8')
+  blank[:]=255,255,255
+  def option2(blank):
+    cv.line(blank,(0,0),(a2,0),(0,0,0),100)
+    cv.line(blank,(0,0),(0,b2),(0,0,0),100)
+    cv.line(blank,(0,b2),(a2,b2),(0,0,0),100)
+    cv.line(blank,(a2,0),(a2,b2),(0,0,0),100)
+    cv.line(blank,(100,100),(900,100),(0,0,0),50)
+    cv.line(blank,(100,100),(100,400),(0,0,0),50)
+    cv.line(blank,(100,400),(900,400),(0,0,0),50)
+    cv.line(blank,(900,100),(900,400),(0,0,0),50)
+    return (blank)
+  
+  img2=option2(blank)
+  cv.imshow("option2",img2)
+  cv.imwrite("Q2-B.jpg",blank)
+  cv.waitKey(0)
+  
     
     
 elif str==3:
@@ -50,10 +71,11 @@ elif str==3:
       cv.rectangle(blank,(0,b1//2),(a1//2,b1),(blue),thickness=-1)
       cv.rectangle(blank,(a1//2,b1//2),(a1,b1),(yellow),thickness=-1)
       return (blank)
-    img2=option3(blank)
-    cv.imshow("Option 3",img2)
+    img3=option3(blank)
+    cv.imshow("Option 3",img3)
     cv.waitKey(0)
-    cv.imwrite("Microsoft.jpg",img2)
+    cv.imwrite("Que2-c.jpg",img3)
     
-    
+else:
+  print("Plz enter among the 3 options only")
 
