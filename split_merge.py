@@ -31,7 +31,7 @@ b,g,r=cv.split(reimg)
 
 merged=cv.merge([b,g,r])
 # we get back the original image
-# cv.imshow("Mergedimg",merged)
+cv.imshow("Mergedimg",merged)
 
 
 
